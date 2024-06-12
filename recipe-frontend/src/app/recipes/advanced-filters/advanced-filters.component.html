@@ -1,0 +1,129 @@
+<div class="flex flex-col mt-20 sm:mt-10 p-2 mb-8 justify-items-center content-center rounded-md border--400">
+    <h1 class="text-3xl sm:mt-16 sm:ml-5 sm:mb-3  md:mt-5 font-bold xl:text-4xl">Advanced Filter</h1>
+    <form id="recipeForm" class="bg-blue-300 p-3 rounded-md w-full border border-gray-400">
+        <div class="flex flex-col">
+            <h3 class="text-xl font-semibold sm:text-center sm:mt-4 sm:mb-3 sm:text-2xl lg:text-3xl border-b border-gray-400 pb-2">Mealtime</h3>
+            <div class="flex flex-col mt-2 space-y-3 sm:flex-row sm:space-y-0 sm:justify-around sm:w-full xl:mt-4">
+                <label class="flex items-center text-lg xl:text-xl">
+                    <input type="checkbox" name="mealtime" value="appetizer" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Appetizer</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="mealtime" value="main course" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Main Course</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="mealtime" value="dessert" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Dessert</span>
+                    </label>
+                </div>
+
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold mt-5 sm:text-center sm:mt-9 sm:mb-5 sm:text-2xl lg:text-3xl border-b border-gray-400 pb-2">Intolerances</h3>
+                <div class="flex flex-col mt-2 space-y-3 sm:flex-row sm:flex-wrap sm:space-y-0 sm:justify-around sm:w-full md:mx-auto md:max-w-7xl xl:mt-8">
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Dairy" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Dairy</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Egg" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Egg</span> 
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Gluten" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Gluten</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Grain" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Grain</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Peanut" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Peanut</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Seafood" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Seafood</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Sesame" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Sesame</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Shellfish" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Shellfish</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Soy" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Soy</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Sulfite" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Sulfite</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Tree Nut" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Tree Nut</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="intolerance" value="Wheat" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Wheat</span>
+                    </label>
+                </div>
+
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold mt-5 sm:text-center sm:mt-9 sm:mb-5 sm:text-2xl lg:text-3xl border-gray-400 pb-2">Diets</h3>
+                <div class="flex flex-col mt-2 space-y-3 sm:flex-row sm:flex-wrap sm:space-y-0 sm:justify-around sm:w-full md:mx-auto md:max-w-8xl xl:mt-8">
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="diet" value="Gluten Free" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Gluten Free</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="diet" value="Ketogenic" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Ketogenic</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="diet" value="Vegetarian" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Vegetarian</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="diet" value="Lacto Vegetarian" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Lacto-Vegetarian</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="diet" value="Ovo Vegetarian" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Ovo-Vegetarian</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="diet" value="Pescetarian" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Pescetarian</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="diet" value="Paleo" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Paleo</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="diet" value="Primal" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Primal</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="diet" value="Low Fodmap" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Low FODMAP</span>
+                    </label>
+                    <label class="flex items-center text-lg xl:text-xl">
+                        <input type="checkbox" name="diet" value="Whole30" class="w-4 h-4 mr-2 mt-0.5"> 
+                        <span>Whole30</span>
+                    </label>
+                </div>
+
+            </div>
+            <button type="button" (click)="submitForm()" class="border-2 border-indigo-700 bg-indigo-700 text-white py-1 w-full hover:bg-indigo-600 hover:font-semibold mt-8">Submit</button>
+        </form>
+    </div>
+    
+    <h3 class="text-3xl sm:mt-16 sm:mb-3  md:mt-5 font-bold xl:text-4xl">Results</h3>
+    <app-recipes [recipes]="fetchMeal" [showTitle]="false"></app-recipes>
