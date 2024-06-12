@@ -1,29 +1,29 @@
-<header class="relative mx-auto p-6 bg-red-500 text-white-500">
-    <input type="checkbox" id="menu-checkbox" class="hidden">
+<header class="relative p-6 bg-red-500 text-white">
+    <input type="checkbox" id="menu-toggle" class="hidden">
     <div class="flex items-center justify-between">
         <a href="#" class="text-3xl">Recipes App</a>
-        <label for="menu-checkbox" class="block lg:hidden cursor-pointer">
+        <label for="menu-toggle" class="cursor-pointer lg:hidden">
             <svg class="fill-current text-white w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
             </svg>
         </label>
         <nav class="hidden lg:flex lg:items-center lg:w-auto">
             <ul class="flex justify-end gap-x-12 text-xl">
-                <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="mr-5 hover:text-green-400">Recipes</a></li>
-                <li><a routerLink="/mealtime" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="mr-5 hover:text-green-400">Meal Customizer</a></li>
-                <li><a routerLink="/advanced-filters" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="mr-5 hover:text-green-400">Advanced Filters</a></li>
+                <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="hover:text-green-400">Recipes</a></li>
+                <li><a routerLink="/mealtime" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="hover:text-green-400">Meal Customizer</a></li>
+                <li><a routerLink="/advanced-filters" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="hover:text-green-400">Advanced Filters</a></li>
                 @if(authService.isLoggedIn()){
-                    <li><button class="text-white hover:text-gray-300" (click)="logout()" class="mr-5 hover:text-green-400">Logout</button></li>
+                    <li><button (click)="logout()" class="hover:text-gray-300">Logout</button></li>
                 }
                 @if(!authService.isLoggedIn()){
-                    <li><a routerLink="/login" class="mr-5 hover:text-green-400">Login</a></li>
+                    <li><a routerLink="/login" class="hover:text-green-400">Login</a></li>
                 }
             </ul>
         </nav>
     </div>
     
-    <nav class="lg:hidden absolute w-full bg-blue-600 text-white rounded-md transition-transform duration-300" id="menu">
-        <ul class="flex flex-col font-bold border-l-4 border-green-400">
+    <nav id="menu" class="lg:hidden">
+        <ul class="flex flex-col items-center bg-blue-600 text-white rounded-md transition-transform duration-300 transform">
             <li><a routerLink="/home" class="block px-5 py-2 hover:text-green-400">Recipes</a></li>
             <li><a routerLink="/mealtime" class="block px-5 py-2 hover:text-green-400">Meal Customizer</a></li>
             <li><a routerLink="/advanced-filters" class="block px-5 py-2 hover:text-green-400">Advanced Filters</a></li>

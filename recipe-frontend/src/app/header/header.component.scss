@@ -1,0 +1,19 @@
+.active{
+    border-bottom: 2px solid #facc15;
+    transform: scale(1.1);
+    transition: border-bottom 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#menu {
+  display: none;
+}
+
+#menu-toggle:checked ~ #menu {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  #menu {
+    display: none !important;
+  }
+}
