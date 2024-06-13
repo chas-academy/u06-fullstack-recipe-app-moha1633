@@ -1,0 +1,15 @@
+<div class="flex relative mt-2 w-fit sm:mt-4 h-fit text-left xl:top-2 xl:space-x-3">
+    <button class="bg-gray-300 hover:bg-gray-100 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center w-52" (click)="toggleDropdown()">
+      <span>{{ type === 'intolerance' ? 'Select Intolerance' : 'Select Diet' }}</span>
+      <svg class="fill-current h-4 w-4 ml-2 mt-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 12l-6-6h12z"/></svg>
+    </button>
+    
+    @if(type === 'diet' && dietDropDownStatus){
+      <app-diet-selector [diets]="diets" (dietsChanged)="updateDietCheckboxes($event)" (mealFetched)="receiveFetchedMeals($event)"></app-diet-selector>
+    }
+    
+    @if(type === 'intolerance' && dropDownStatus){
+      <app-intolerances-selector [checkboxes]="checkboxes" (checkboxesChanged)="updateCheckboxes($event)" (mealFetched)="receiveFetchedMeals($event)"></app-intolerances-selector>
+    }
+
+</div>

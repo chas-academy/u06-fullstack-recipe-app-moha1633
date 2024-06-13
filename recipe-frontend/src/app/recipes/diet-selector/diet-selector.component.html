@@ -1,0 +1,10 @@
+<div class="absolute h-fit right-0 top-10 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 sm:top-10 sm:left-0 sm:w-48 xl:top-10  xl:w-48">
+        <div class="py-1">
+            @for(diet of diets; track diet.id){
+                <div class="w-full flex flex-row-reverse p-1">
+                    <input type="checkbox" [id]="diet.id" [name]="diet.id" [value]="diet.value" class="relative right-1 w-5" #diet (change)="toggleDiet(diet.id)" [checked]="diet.checked">
+                    <label [for]="diet.id" class="flex-1 text-lg">{{ diet.id }}</label><br>
+                </div>
+            }
+        </div>
+</div>

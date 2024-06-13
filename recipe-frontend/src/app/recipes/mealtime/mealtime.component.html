@@ -1,0 +1,18 @@
+<div class="flex flex-col mt-20 sm:mt-10 p-2 mb-8 justify-items-center content-center xl:flex-row ">
+    <h1 class="text-3xl sm:mt-16 md:mt-10 sm:mb-3 font-bold xl:text-3xl text-gray-700">Meal Options</h1>
+    <!--Created a template reference called #mealTypeSelect that will allow us to directly access our value property from the select element without typescript checking for errors-->
+    <select #mealTypeSelect class="flex self-start mt-2.5 h-fit p-1.5 px-1 xl:mt-10 border-2 border-black-500 w-48 rounded-md xl:ml-5" (change)="selectMealOption(mealTypeSelect.value)">
+        <option>Select a Meal</option>
+        <option value="appetizer">Appetizer</option>
+        <option value="main course">Main Course</option>
+        <option value="dessert">Dessert</option>
+    </select>
+
+    <div class="flex flex-col sm:flex-row w-full sm:space-x-3 xl:mt-3.5 xl:ml-3 xl:w-96 ">
+        <app-drop-down-menu [dropDownStatus]="dropDownStatus" [dietDropDownStatus]="dietDropDownStatus" [type]="'intolerance'" (mealFetched)="receiveFetchedMeals($event)" class="bg-white"></app-drop-down-menu>
+        <app-drop-down-menu [dropDownStatus]="dropDownStatus" [dietDropDownStatus]="dietDropDownStatus" [type]="'diet'" (mealFetched)="receiveFetchedMeals($event)" class="bg-white"></app-drop-down-menu>
+    </div>
+    
+</div>
+
+<app-recipes [recipes]="fetchMeal" [showTitle]="false" (mealFetched)="receiveFetchedMeals"></app-recipes>
