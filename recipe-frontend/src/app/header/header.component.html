@@ -1,4 +1,4 @@
-<header class="relative p-6 bg-red-500 text-white">
+<header class="relative p-6 bg-orange-500 text-white">
     <input type="checkbox" id="menu-toggle" class="hidden">
     <div class="flex items-center justify-between">
         <a href="#" class="text-3xl">Recipes App</a>
@@ -23,15 +23,15 @@
     </div>
     
     <nav id="menu" class="lg:hidden">
-        <ul class="flex flex-col items-center bg-blue-600 text-white rounded-md transition-transform duration-300 transform">
+        <ul class="flex flex-col items-center bg-orange-600 text-white rounded-md transition-transform duration-300 transform">
             <li><a routerLink="/home" class="block px-5 py-2 hover:text-green-400">Recipes</a></li>
             <li><a routerLink="/mealtime" class="block px-5 py-2 hover:text-green-400">Meal Customizer</a></li>
             <li><a routerLink="/advanced-filters" class="block px-5 py-2 hover:text-green-400">Advanced Filters</a></li>
             @if(authService.isLoggedIn()){
-                <li><a (click)="logout()" class="block px-5 py-2 hover:text-green-400">Logout</a></li>
+                <li ><a (click)="logout()" class="block px-5 py-2 hover:text-green-400" (click)="hideMenu()">Logout</a></li>
             }
             @if(!authService.isLoggedIn()){
-                <li><a routerLink="/login" class="block px-5 py-2 hover:text-green-400">Login</a></li>
+                <li><a routerLink="/login" class="block px-5 py-2 hover:text-green-400" (click)="hideMenu()">Login</a></li>
             }
         </ul>
     </nav>

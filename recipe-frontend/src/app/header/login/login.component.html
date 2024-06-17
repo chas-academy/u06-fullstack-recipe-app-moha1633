@@ -1,8 +1,8 @@
 @if(confirmationMessage){
     <div class="relative top-1 bg-green-500 mt-2 p-1.5 rounded-md font-semibold text-white">{{ confirmationMessage }}</div>
 }
-<div class="relative mx-auto flex justify-center items-center top-3 max-w-xl min-h-screen">
-    <div class="border-2 border-black w-full p-10 shadow-lg bg-blue-600 text-white rounded-md">
+<div class="relative mx-auto flex justify-center items-center top-3 max-w-xl min-h-screen px-4 sm:px-6 lg:px-8">
+    <div class="border-2 border-black w-full p-10 shadow-lg bg-blue-600 bg-blue-500 text-white rounded-md">
         <h1 class="text-3xl block text-center font-semibold">Login</h1>
         <hr class="mt-3">
         @if(loginError){
@@ -14,16 +14,17 @@
         </div>
         <div class="mt-3">
             <label for="password" class="block text-base mb-1">Password</label>
-            <input type="password" id="password" [(ngModel)]="password"  class="border text-black w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-black" placeholder="Enter Password"/>
+            <input type="password" id="password" [(ngModel)]="password" class="border text-black w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-black" placeholder="Enter Password"/>
         </div>
         <div class="mt-5">
             <button type="submit" (click)="login()" class="border-2 border-white bg-white text-blue-600 py-2 w-full hover:bg-gray-500 font-bold">Login</button>
         </div>
-        <div class=" relative top-2 mt-3">
+        <div class="relative top-2 mt-3">
             <div>
-                <span>Don't Have an account?</span> 
+                <span>Don't Have an account?</span>
                 <a routerLink="/signup" class="ml-2 font-semibold">Sign Up</a>
             </div>
         </div>
     </div>
 </div>
+
